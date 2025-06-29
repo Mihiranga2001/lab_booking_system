@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Lab</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Add New Lab</h2>
+        <form action="add_lab.php" method="POST">
+            <label>Lab ID:</label><br>
+            <input type="number" name="lab_id" required><br><br>
+
+            <label>Lab Name:</label><br>
+            <input type="text" name="lab_name" required><br><br>
+
+            <label>Capacity:</label><br>
+            <input type="number" name="capacity" required><br><br>
+
+            <label>Availability:</label><br>
+            <select name="availability" required>
+                <option value="1">Available</option>
+                <option value="0">Not Available</option>
+            </select><br><br>
+
+            <input type="submit" value="Add Lab">
+        </form>
+        <br>
+        <a href="../index.php" class="button">Back to Home</a>
+
+    </div>
+</body>
+</html>
+

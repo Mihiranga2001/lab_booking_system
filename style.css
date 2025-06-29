@@ -1,0 +1,380 @@
+/* Reset and base styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px; /* Good for small screens */
+}
+
+/* Centered content box */
+.container {
+    background: white;
+    padding: 40px 50px; /* Increased padding for more internal space */
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 95%; /* Increased width percentage */
+    max-width: 700px; /* Increased maximum width */
+    min-height: 400px; /* Added minimum height */
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form inputs and select */
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus states for accessibility */
+form input:focus, form select:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Unified button styling */
+.button, 
+form input[type="submit"], 
+a.button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.button:hover,
+form input[type="submit"]:hover,
+a.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.button:active,
+form input[type="submit"]:active,
+a.button:active {
+    transform: translateY(0);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Standard tables (used in lab lists and logs) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #495057;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+/* Beautiful styled table for booking views */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.styled-table thead {
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #e8f4f8;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+/* Status indicators */
+.status-available {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.status-booked {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.status-maintenance {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+/* Alert messages */
+.alert {
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+/* Loading spinner */
+.spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #007BFF;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Form validation styles */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input.error,
+.form-group select.error {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25);
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Card layout for multiple containers */
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Navigation styles */
+.nav-menu {
+    background-color: #343a40;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.nav-menu a {
+    color: white;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: #007BFF;
+    text-decoration: none;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .styled-table {
+        font-size: 14px;
+    }
+    
+    .styled-table th, .styled-table td {
+        padding: 8px 10px;
+    }
+    
+    .button, 
+    form input[type="submit"], 
+    a.button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 15px;
+        max-width: 100%;
+    }
+    
+    .styled-table {
+        font-size: 12px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .styled-table th, .styled-table td {
+        padding: 6px 8px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+    
+    .container, .card {
+        background-color: #2d2d2d;
+        color: #e0e0e0;
+    }
+    
+    form input, form select {
+        background-color: #3a3a3a;
+        color: #e0e0e0;
+        border-color: #555;
+    }
+    
+    .styled-table {
+        background-color: #2d2d2d;
+    }
+    
+    .styled-table tbody tr:nth-child(even) {
+        background-color: #3a3a3a;
+    }
+    
+    .styled-table tbody tr:hover {
+        background-color: #404040;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .container {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    .button, 
+    form input[type="submit"], 
+    a.button {
+        display: none;
+    }
+    
+    .styled-table tbody tr:hover {
+        background-color: transparent;
+    }
+}
