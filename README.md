@@ -17,9 +17,8 @@ This is a **database management system (DBMS) project** for managing university 
 
 🧑 **Student**
 
-* Log in to view lab schedules
-* Check availability of labs
-* View approved bookings
+* Log in
+* view lab schedules
 
 🧑‍🏫 **Instructor**
 
@@ -33,14 +32,12 @@ This is a **database management system (DBMS) project** for managing university 
 * Log in
 * Approve or reject lab booking requests
 * View lab and equipment details
-* Track usage logs
 
 👨‍🎓 **Lecture-in-Charge**
 
 * Log in
 * View lab schedules
 * Monitor lab usage logs
-* Generate usage reports
 
 ---
 
@@ -50,7 +47,9 @@ This is a **database management system (DBMS) project** for managing university 
 lab_booking_system/
 ├── db_connect.php
 ├── index.php
-├── dashboard.php
+├── index.html
+├── logout.php
+├── images/
 ├── login/
 ├── register/
 ├── labs/
@@ -98,7 +97,7 @@ The system uses MySQL with these main tables:
 * `Lab`
 * `Lab_Booking`
 * `Lab_Equipment`
-* `Usage_log`
+* `instructor_book_booking`
 * Relationship tables for bookings and schedules
 
 ---
@@ -109,7 +108,7 @@ The system uses MySQL with these main tables:
 * Real-time lab availability and booking
 * Approval workflow for lab requests
 * Lab and equipment tracking
-* Usage logs and reporting
+* Usage logs
 * Responsive, modern UI design
 
 ---
