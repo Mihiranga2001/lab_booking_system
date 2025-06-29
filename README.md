@@ -1,7 +1,7 @@
-🧪 Lab Booking System
+#🧪 Lab Booking System
 This is a database management system (DBMS) project for managing university laboratory operations, built with PHP, MySQL, and CSS. The system offers role-based access for Instructors, Students, Lab Technical Officers, and Lecturers in Charge.
 
-🔧 Technologies Used
+##🔧 Technologies Used
 PHP
 
 MySQL (phpMyAdmin)
@@ -10,8 +10,8 @@ HTML/CSS
 
 XAMPP (Apache & MySQL)
 
-👤 User Roles & Functionalities
-🧑 Student
+##👤 User Roles & Functionalities
+###🧑 Student
 
 Log in to view lab schedules
 
@@ -19,7 +19,7 @@ Check availability of labs
 
 View approved bookings
 
-🧑‍🏫 Instructor
+###🧑‍🏫 Instructor
 
 Log in
 
@@ -29,7 +29,7 @@ View and track booking approvals
 
 View lab schedules
 
-🧑‍💼 Lab Technical Officer
+###🧑‍💼 Lab Technical Officer
 
 Log in
 
@@ -39,7 +39,7 @@ View lab and equipment details
 
 Track usage logs
 
-👨‍🎓 Lecture-in-Charge
+###👨‍🎓 Lecture-in-Charge
 
 Log in
 
@@ -49,7 +49,7 @@ Monitor lab usage logs
 
 Generate usage reports
 
-🗃️ Folder Structure
+##🗃️ Folder Structure
 pgsql
 Copy
 Edit
@@ -66,7 +66,8 @@ lab_booking_system/
 ├── approval/
 ├── reports/
 └── style.css
-🚀 How to Run Locally
+
+##🚀 How to Run Locally
 Install XAMPP
 
 Place the lab_booking_system folder in htdocs
@@ -88,7 +89,8 @@ http://localhost/lab_booking_system
 📸 Screenshots
 Screenshots of login screens, dashboards, and key modules are available in the Screenshots folder (create this folder to store images).
 
-📂 Database
+##📂 Database
+
 The system uses MySQL with these main tables:
 
 Student
@@ -109,7 +111,8 @@ Usage_log
 
 Relationship tables for bookings and schedules
 
-✅ Features
+##✅ Features
+
 Role-based access control for 4 user types
 
 Real-time lab availability and booking
@@ -122,14 +125,14 @@ Usage logs and reporting
 
 Responsive, modern UI design
 
-🔒 Security
+##🔒 Security
 Password hashing (password_hash())
 
 Session-based authentication
 
 Input validation and sanitization
 
-📌 Future Improvements
+##📌 Future Improvements
 Email/SMS notifications for bookings and approvals
 
 Calendar integration for schedules
@@ -140,6 +143,6 @@ Multi-lab support and grouping
 
 Auto-reminders for upcoming reservations
 
-📬 Author
+##📬 Author
 GitHub: https://github.com/Mihiranga2001
 University: University of Jaffna
