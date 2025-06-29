@@ -1,58 +1,52 @@
-# Lab Booking System
-This is a database management system (DBMS) project for managing university laboratory operations, built with PHP, MySQL, and CSS. The system offers role-based access for Instructors, Students, Lab Technical Officers, and Lecturers in Charge.
+# 🧪 Lab Booking System
 
-##🔧 Technologies Used
-PHP
+This is a **database management system (DBMS) project** for managing university laboratory operations, built with **PHP**, **MySQL**, and **CSS**. The system offers role-based access for Instructors, Students, Lab Technical Officers, and Lecturers in Charge.
 
-MySQL (phpMyAdmin)
+---
 
-HTML/CSS
+## 🔧 Technologies Used
 
-XAMPP (Apache & MySQL)
+* **PHP**
+* **MySQL (phpMyAdmin)**
+* **HTML/CSS**
+* **XAMPP** (Apache & MySQL)
 
-##👤 User Roles & Functionalities
-###🧑 Student
+---
 
-Log in to view lab schedules
+## 👤 User Roles & Functionalities
 
-Check availability of labs
+🧑 **Student**
 
-View approved bookings
+* Log in to view lab schedules
+* Check availability of labs
+* View approved bookings
 
-###🧑‍🏫 Instructor
+🧑‍🏫 **Instructor**
 
-Log in
+* Log in
+* Request lab bookings
+* View and track booking approvals
+* View lab schedules
 
-Request lab bookings
+🧑‍💼 **Lab Technical Officer**
 
-View and track booking approvals
+* Log in
+* Approve or reject lab booking requests
+* View lab and equipment details
+* Track usage logs
 
-View lab schedules
+👨‍🎓 **Lecture-in-Charge**
 
-###🧑‍💼 Lab Technical Officer
+* Log in
+* View lab schedules
+* Monitor lab usage logs
+* Generate usage reports
 
-Log in
+---
 
-Approve or reject lab booking requests
+## 🗃️ Folder Structure
 
-View lab and equipment details
-
-Track usage logs
-
-###👨‍🎓 Lecture-in-Charge
-
-Log in
-
-View lab schedules
-
-Monitor lab usage logs
-
-Generate usage reports
-
-##🗃️ Folder Structure
-pgsql
-Copy
-Edit
+```
 lab_booking_system/
 ├── db_connect.php
 ├── index.php
@@ -66,83 +60,80 @@ lab_booking_system/
 ├── approval/
 ├── reports/
 └── style.css
+```
 
-##🚀 How to Run Locally
-Install XAMPP
+---
 
-Place the lab_booking_system folder in htdocs
+## 🚀 How to Run Locally
 
-Start Apache and MySQL
+1. **Install XAMPP**
+2. **Place the `lab_booking_system` folder** in `htdocs`
+3. **Start Apache and MySQL**
+4. **Create a MySQL database**
 
-Create a MySQL database
+   * Open **phpMyAdmin**
+   * Import your SQL schema (e.g., `lab_booking_system.sql`)
+5. **Access the system:**
 
-Open phpMyAdmin
+   ```
+   http://localhost/lab_booking_system
+   ```
 
-Import your SQL schema (e.g., lab_booking_system.sql)
+---
 
-Access the system:
+## 📸 Screenshots
 
-arduino
-Copy
-Edit
-http://localhost/lab_booking_system
-📸 Screenshots
-Screenshots of login screens, dashboards, and key modules are available in the Screenshots folder (create this folder to store images).
+Screenshots of login screens, dashboards, and key modules are available in the `Screenshots` folder *(create this folder to store images)*.
 
-##📂 Database
+---
+
+## 📂 Database
 
 The system uses MySQL with these main tables:
 
-Student
+* `Student`
+* `Instructor`
+* `Lab_TO`
+* `Lecture_in_charge`
+* `Lab`
+* `Lab_Booking`
+* `Lab_Equipment`
+* `Usage_log`
+* Relationship tables for bookings and schedules
 
-Instructor
+---
 
-Lab_TO
+## ✅ Features
 
-Lecture_in_charge
+* Role-based access control for 4 user types
+* Real-time lab availability and booking
+* Approval workflow for lab requests
+* Lab and equipment tracking
+* Usage logs and reporting
+* Responsive, modern UI design
 
-Lab
+---
 
-Lab_Booking
+## 🔒 Security
 
-Lab_Equipment
+* Password hashing (`password_hash()`)
+* Session-based authentication
+* Input validation and sanitization
 
-Usage_log
+---
 
-Relationship tables for bookings and schedules
+## 📌 Future Improvements
 
-##✅ Features
+* Email/SMS notifications for bookings and approvals
+* Calendar integration for schedules
+* Enhanced analytics dashboards
+* Multi-lab support and grouping
+* Auto-reminders for upcoming reservations
 
-Role-based access control for 4 user types
+---
 
-Real-time lab availability and booking
+## 📬 Author
 
-Approval workflow for lab requests
+GitHub: [https://github.com/Mihiranga2001](https://github.com/Mihiranga2001)
+University: **University of Jaffna**
 
-Lab and equipment tracking
-
-Usage logs and reporting
-
-Responsive, modern UI design
-
-##🔒 Security
-Password hashing (password_hash())
-
-Session-based authentication
-
-Input validation and sanitization
-
-##📌 Future Improvements
-Email/SMS notifications for bookings and approvals
-
-Calendar integration for schedules
-
-Enhanced analytics dashboards
-
-Multi-lab support and grouping
-
-Auto-reminders for upcoming reservations
-
-##📬 Author
-GitHub: https://github.com/Mihiranga2001
-University: University of Jaffna
