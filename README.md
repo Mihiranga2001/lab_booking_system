@@ -1,4 +1,4 @@
-#🧪 Lab Booking System
+# Lab Booking System
 This is a database management system (DBMS) project for managing university laboratory operations, built with PHP, MySQL, and CSS. The system offers role-based access for Instructors, Students, Lab Technical Officers, and Lecturers in Charge.
 
 ##🔧 Technologies Used
