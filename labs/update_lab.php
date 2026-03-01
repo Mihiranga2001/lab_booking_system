@@ -21,7 +21,6 @@ if (isset($_GET['lab_id']) && isset($_GET['status']) && isset($_GET['date'])) {
     $lab_id = intval($_GET['lab_id']);
     $new_status = intval($_GET['status']); // 1 or 0
     $date = $_GET['date'];
-    $user_id = $_SESSION['user_id'];
     
     // Validation
     if ($lab_id <= 0) {
@@ -43,17 +42,16 @@ if (isset($_GET['lab_id']) && isset($_GET['status']) && isset($_GET['date'])) {
             
             // Insert or update date-specific availability
             // This will only affect the selected date, not other dates
-            $sql = "INSERT INTO Lab_Availability (Lab_ID, availability_date, is_available, updated_by) 
-                    VALUES (?, ?, ?, ?) 
+            $sql = "INSERT INTO Lab_Availability (Lab_ID, availability_date, is_available) 
+                    VALUES (?, ?, ?) 
                     ON DUPLICATE KEY UPDATE 
-                    is_available = VALUES(is_available), 
-                    updated_by = VALUES(updated_by),
+                    is_available = VALUES(is_available),
                     updated_at = CURRENT_TIMESTAMP";
             
             $stmt = $conn->prepare($sql);
             
             if ($stmt) {
-                $stmt->bind_param("isii", $lab_id, $date, $new_status, $user_id);
+                $stmt->bind_param("isi", $lab_id, $date, $new_status);
                 
                 if ($stmt->execute()) {
                     $success = true;
